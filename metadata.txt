@@ -1,0 +1,17 @@
+[general]
+name=ForestMeshJP
+qgisMinimumVersion=3.44
+qgisMaximumVersion=3.44
+description=全国森林資源メッシュベクトルタイルをポリゴンデータとして出力するプラグイン。
+about=ForestMeshJPは、林野庁の公開する森林資源メッシュベクトルタイルを、QGIS上で範囲指定してダウンロードし、GeoPackageなどで保存できるプラグインです。
+version=1.0.1
+author=Forestgeo.info, Naoki Muroki
+email=naoki.muroki.84@forestgeo.info
+homepage=https://forestgeo.info/
+tracker=https://forestgeo.info/
+repository=https://forestgeo.info/
+category=Vector
+icon=icon.png
+tags=forest,mesh,vector tile,林野庁,森林,メッシュ
+experimental=False
+deprecated=False
