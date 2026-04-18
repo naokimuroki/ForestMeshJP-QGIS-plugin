@@ -1,5 +1,7 @@
 from qgis.PyQt.QtWidgets import QAction
+from qgis.PyQt.QtGui import QIcon
 from .forestmeshjp_dialog import ForestMeshJPDialog
+import os
 
 class ForestMeshJPPlugin:
 
@@ -8,8 +10,12 @@ class ForestMeshJPPlugin:
         self.action = None
 
     def initGui(self):
-        self.action = QAction("ForestMeshJP", self.iface.mainWindow())
+        icon_path = os.path.join(os.path.dirname(__file__), "icon.png")
+
+        self.action = QAction(QIcon(icon_path), "", self.iface.mainWindow())
+        self.action.setToolTip("ForestMeshJP")  
         self.action.triggered.connect(self.run)
+
         self.iface.addToolBarIcon(self.action)
         self.iface.addPluginToMenu("&ForestMeshJP", self.action)
 
